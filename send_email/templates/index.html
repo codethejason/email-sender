@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+  <!-- Include stylesheets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet'>
+  <title>Django Emailer</title>
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+
+  <div class="box">
+    <h1>Django Email Sender</h1>
+    <h2>By codethejason for GCI FOSSASIA 2015-16</h2>
+    <form id="sendEmail" action="/done" method="post">
+      {% csrf_token %}
+      <input id="email" type="email" name="email">
+      <input id="submit" type="submit" name="submit" value="Send Email">
+    </form>
+  </div>
+</body>
+</html>

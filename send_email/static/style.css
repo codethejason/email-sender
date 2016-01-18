@@ -1,0 +1,68 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #092e20;
+}
+
+h1::selection, h2::selection {
+  background-color: rgba(255,255,255,0.2);
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+input#email {
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px auto 30px;
+  color: #092e20;
+  text-align: center;
+  font-weight: 700;
+}
+
+input#email:focus {
+  box-shadow: 0 0 5px 3px rgba(0,153,255,0.5);
+}
+
+input#submit {
+  padding: 14px 12px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+
+input#submit:hover {
+  background-color: #ddd;
+}
+
+input#submit:active {
+  background-color: #092e20;
+  color: #fff;
+}

@@ -38,7 +38,7 @@ input#email {
   border: 0;
   padding: 10px;
   box-sizing: border-box;
-  margin: 20px auto 30px;
+  margin: 20px auto;
   color: #092e20;
   text-align: center;
   font-weight: 700;
@@ -46,6 +46,10 @@ input#email {
 
 input#email:focus {
   box-shadow: 0 0 5px 3px rgba(0,153,255,0.5);
+}
+
+div.checkboxDiv {
+  padding: 5px 0 15px;
 }
 
 input#submit {

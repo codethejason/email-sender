@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
+from .models import Email
 
 # Create your views here.
 
@@ -19,6 +20,8 @@ def done(request):
         return render(request, 'error.html')
     content = "Hello there, the email came through! Be sure to checkout FOSSASIA!"
     if confirm == 'on':
+	dbemail = Email(email = email)
+	dbemail.save()
         send_mail('It Works!', content, 'from@example.com',
         [email], fail_silently=False)
         return render(request, 'done.html')

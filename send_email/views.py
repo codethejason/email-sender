@@ -15,10 +15,12 @@ def done(request):
     confirm = request.POST.get('checkbox', '')
     try:
         validate_email(email)
-        except ValidationError as e:
+    except ValidationError as e:
         return render(request, 'error.html')
     content = "Hello there, the email came through! Be sure to checkout FOSSASIA!"
     if confirm == 'on':
-      send_mail('It Works!', content, 'from@example.com',
-      [email], fail_silently=False)
-      return render(request, 'done.html')
+        send_mail('It Works!', content, 'from@example.com',
+        [email], fail_silently=False)
+        return render(request, 'done.html')
+    else:
+      return render(request, 'notsubscribed.html')

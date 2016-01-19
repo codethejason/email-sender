@@ -48,7 +48,7 @@ input#email:focus {
   box-shadow: 0 0 5px 3px rgba(0,153,255,0.5);
 }
 
-div.checkboxDiv {
+div.checkboxContainer {
   padding: 5px 0 15px;
 }
 
